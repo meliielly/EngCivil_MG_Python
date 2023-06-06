@@ -1,0 +1,9 @@
+
+alt = float(input("Altura:"))
+peso = float(input("Peso:"))
+nome = str(input("Nome:"))
+
+def imc(alt, peso, nome):
+  print("Estou calculando o seu imc")
+  return print(nome, "seu imc é:", peso/(alt*alt))
+imc(alt,peso,nome)
