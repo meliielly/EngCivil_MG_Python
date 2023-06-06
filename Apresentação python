@@ -1,0 +1,26 @@
+nome = "Melissa"
+idade = 19
+facul = "UFPR"
+
+print("Apresentação: ");
+print("\nAluna:", nome, "\nIdade:", idade, "\nFaculdade:",facul);
+
+a = 5;
+b = 2.6;
+
+soma = idade + a + b
+
+print("Tipo nome=",type(nome));
+print("Tipo nome=",type(idade));
+print("Tipo nome=",type(facul));
+
+print("Soma:", soma);
+
+apeli4do = input("Apelido?")
+print(apelido)
+alt = input("Altura?")
+print(a)
+peso = input("Peso?")
+print(apelido)
+
+print("\nSeu apelido é:", apelido, "\nSua altura é:", alt, "\nSeu peso é:", peso)
