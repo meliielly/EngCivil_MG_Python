@@ -1,0 +1,10 @@
+#uso basico de condicionais 
+
+num = input("Digite um numero entre 0 a 100:")
+
+if float(num)<50: 
+  print("\nO numero", num ,"é menor que 50")
+elif float(num)>80: 
+  print("\nO numero", num ,"é maior que 80")
+else:
+  print("\nO numero", num ,"está entre 50 e 80")
