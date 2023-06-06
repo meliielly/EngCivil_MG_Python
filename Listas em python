@@ -1,0 +1,17 @@
+#listas
+
+f1 = "Harry Potter"
+f2 = "Senhor dos anéis"
+f3 = "Star Wars"
+
+filmes=[f1,f2,f3]
+filmes[1] = "Toy Story"
+
+print(filmes)
+
+# utilizando loops
+
+for i in filmes[0]:
+  print(i)
+  print("#####")
+  print("Filme nota 10")
