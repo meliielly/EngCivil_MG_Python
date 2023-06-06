@@ -1,0 +1,7 @@
+ano = 2023
+def ano_mais_um (ano):
+
+  print("Próximo ano será?: ")
+  return print(ano+1)
+ano_mais_um(ano)
+ 
