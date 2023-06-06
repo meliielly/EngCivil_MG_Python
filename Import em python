@@ -1,0 +1,11 @@
+#importando pacotes de biblioteca
+import numpy as np
+
+def vel(h):
+  g=10
+  v=np.float16(np.sqrt(g*h))
+  return v
+
+a = float(input("qual é a profundidade?"))
+v= vel(a)
+print("Velocidade igual a",v)
