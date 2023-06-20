@@ -1,0 +1,162 @@
+# Questão 1 : Através do Teorema de Pitagoras estime o tamanho da hipotenusa a partir da entrada no teclado dos valores do cateto oposto e adjacente. Apresente o algoritmo e a solução.
+
+#Aluna: Melissa Gabriely GRR202321572
+
+import math
+
+co = 0
+ca = 0
+
+print('Forneça os valores dos catetos para o cálculo da Hipotenusa:\n')
+co = int(input('\nInforme o valor do cateto oposto:\n>'))
+ca = int(input('\nInforme o valor do cateto adjacente:\n>'))
+
+hip = (co*co) + (ca*ca)
+result = math.sqrt(hip)
+
+print("\nHipotenusa: ", result)
+print("Hipotenusa Arredondada: ", round(result))
+
+***********************************************************************************
+
+# Questão 2 : Refaça a questão 1, entretanto, utilizando o comando def para criar uma função para calcular a hipotenusa.
+
+#Aluna: Melissa Gabriely GRR202321572
+
+import math
+
+def hipotenusa(catetoOposto,catetoAdjacente):
+
+    hip = (catetoOposto*catetoOposto) + (catetoAdjacente*catetoAdjacente)
+    result = math.sqrt(hip)
+    return result
+   
+print('Forneça os valores dos catetos para o cálculo da Hipotenusa:\n')
+co = int(input('\nInforme o valor do cateto oposto:\n>'))
+ca = int(input('\nInforme o valor do cateto adjacente:\n>'))
+
+hip = hipotenusa(co, ca)
+
+print("\nHipotenusa: ", hip)
+print("Hipotenusa Arredondada: ", round(hip))
+
+
+***********************************************************************************
+
+# • Questão 3 : Implementar duas funções: a) Uma que converta temperatura em graus Celsius para Fahrenheit. b) Outra que converta temperatura em graus Fahrenheit para Celsius.
+
+# Aluna: Melissa Gabriely GRR202321572
+
+def celsius(f):
+    c = (f-32)*5/9
+    return c
+
+
+def fahrenheit(c):
+    f = (c*9/5)+32
+    return f
+
+
+op = 0
+
+print('\nSelecione uma opção:\n')
+op = int(input(
+    '\n[1] Converter temperatura para Celsius\n[2] Converter temperatura para Fahrenheit\n[3] Sair\n>'))
+
+if op == 1:
+    tempF = float(input('\nDigite a temperatura em Fahrenheit: '))
+    convC = celsius(tempF)
+    print('\nA conversão de ', tempF, ' °F é ', convC, ' °C')
+
+elif op == 2:
+    tempC = float(input('\nDigite a temperatura em Celsius: '))
+    convF = celsius(tempC)
+    print('\nA conversão de ', tempC, ' °C é ', convF, ' °F')
+
+else:
+    print('\n')
+
+
+***********************************************************************************
+
+# • Questão 4 : Implementar uma função que retorne verdadeiro se o número for ímpar (falso caso contrário). Testar com números de 1 a 100 através de chamada no teclado.
+
+# Aluna: Melissa Gabriely GRR20232172
+
+def imparOuPar(n):
+    num = n/2
+    return num
+num = int(input('\nDigite um número: \n>'))
+imparOuPar(num)
+
+if (num%2) == 0:
+    print('\nO número é PAR!')
+else:
+    print('\nO número é ÍMPAR!')
+
+
+***********************************************************************************
+
+# • Questão 5 : Sabendo que a velocidade da onda de gravidade em águas profundas dependem da profundidade do mar h, e da aceleração da gravidade g, de acordo com a equação abaixo. Crie uma função (def) que calcule a velocidade da onda de acordo com valores h de entrada.
+
+# Aluna: Melissa Gabriely GRR203232172
+
+import math
+
+
+def velocidadeOnda(h):
+    v = math.sqrt(10*h)
+    return v
+
+
+alt = float(input('\nDigite o valor da altura: \n>'))
+velocidade = velocidadeOnda(alt)
+print('\nA velocidade da onda é: ', velocidade)
+print('\nVelocidade da onda Arredondada: ', round(velocidade))
+
+***********************************************************************************
+
+# • Questão 6 : Utilizando a função construído no exercício anterior, crie um laço/loop para calcular a velocidade da onda automaticamente variando de 1 a 10 m de profundidade.
+
+# Aluna: Melissa Gabriely GRR20232172
+
+import math
+
+
+def velocidadeOnda(h):
+    v = math.sqrt(10*h)
+    return v
+
+
+for i in range(11):
+    velocidade = velocidadeOnda(i)
+    print('\nCom a altura de [', i,
+          'm ] a velocidade da onda é: ', velocidade)
+    print('\nVelocidade da onda Arredondada: ', round(velocidade))
+
+
+***********************************************************************************
+
+# • Questão 7 : Crie um algoritmo para o jogo do adivinhe o número. Ou seja, o computador escolhe um número aleatório de 0 a 100 e você deve acertar baseado nas dicas de que seu chute foi um valor acima ou abaixo do número escolhido pelo computador
+
+# Aluna: Melissa Gabriely GRR20232172
+
+from random import randint
+
+print("JOGO ADIVINHE O NÚMERO!")
+sorteado = randint(1, 100)
+chute = 0
+
+while chute != sorteado:
+    chute = int(input("\nChute um numero de 1 a 100:\n>"))
+    if chute == sorteado:
+        print("Vc venceu!!!  O numero sorteado era: {0} ".format(chute))
+    else:
+        if chute > sorteado:
+            print("\nChute um valor menor!")
+        else:
+            print("\nChute um valor maior!")
+
+
+
+
